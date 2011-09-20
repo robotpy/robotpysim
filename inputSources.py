@@ -1,12 +1,6 @@
 from pygame.locals import *
 
-class PwmMotorConfig:
-    def __init__(self, portList, pwmPort, displayType):
-        portList.append(self)
-        self.port = pwmPort
-        self.displayType = displayType
-    def Write(self, signal):
-        self.displayType.write(signal)
+
         
 class JoystickConfig:
     def __init__(self, portList, joyPort, ySource):

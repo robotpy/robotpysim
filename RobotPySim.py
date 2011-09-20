@@ -1,5 +1,5 @@
 import robot
-import robotDisplayer
+import outputDevices
 import inputer
 import wpilib
 import threading
@@ -9,7 +9,7 @@ import pygame
 def main():
     run = True
     
-    disp = robotDisplayer.RobotDisplayer()
+    disp = outputDevices.RobotDisplayer()
     control = inputer.Inputer()
     
     wpilib.setupFakeWpilib(disp, control)

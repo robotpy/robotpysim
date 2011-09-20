@@ -45,9 +45,9 @@ from pygame.locals import *
 
 
 pwmPorts = []
-oD.PwmMotorConfig(pwmPorts,1,rd.Spinner())
-oD.PwmMotorConfig(pwmPorts,2,rd.Spinner())
-oD.PwmMotorConfig(pwmPorts,3,rd.SimpleOutput())
+oD.PwmMotorConfig(pwmPorts,1,oD.Spinner())
+oD.PwmMotorConfig(pwmPorts,2,oD.Spinner())
+oD.PwmMotorConfig(pwmPorts,3,oD.SimpleOutput())
 
 
 canIds = []
@@ -56,7 +56,7 @@ solenoidPorts = []
 
 
 joysticks = []
-iS.JoystickConfig(joysticks, 1, ds.TwoKeySimpleInput(K_w, K_s))
+iS.JoystickConfig(joysticks, 1, iS.TwoKeySimpleInput(K_w, K_s))
 
 
 def findPwmByPort(port):
