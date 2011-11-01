@@ -17,13 +17,13 @@ class MyRobot(wpilib.SimpleRobot):
 
     def OperatorControl(self):
         motor = wpilib.Jaguar(1)
-        motor2 = wpilib.Jaguar(2)
-        printMotor = wpilib.Jaguar(3)
+        #motor2 = wpilib.Jaguar(2)
+        #printMotor = wpilib.Jaguar(3)
         joy = wpilib.Joystick(1)
         while self.IsOperatorControl() and self.IsEnabled():
-            printMotor.Set(joy.GetY())
+            #printMotor.Set(joy.GetY())
             motor.Set(joy.GetY())
-            motor2.Set(joy.GetY())
+            #motor2.Set(joy.GetY())
             wpilib.Wait(.06)
         print("Exiting operator control")
         pass
